@@ -1,0 +1,14 @@
+Options +ExecCGI
+AddHandler cgi-script .py
+DirectoryIndex trolling.py
+header add Access-Control-Allow-Origin *
+header add Access-Control-Allow-Headers X-Requested-With
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+        RewriteBase /transporfail/transws/
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteCond %{REQUEST_URI} !^/favicon.ico$
+        RewriteCond %{REQUEST_URI} !^(/.*)+trolling.py/
+        RewriteRule ^(.*)$ trolling.py/ws/$1 [PT]
+</IfModule>
