@@ -10,5 +10,5 @@ header add Access-Control-Allow-Headers X-Requested-With
         RewriteCond %{REQUEST_FILENAME} !-d
         RewriteCond %{REQUEST_URI} !^/favicon.ico$
         RewriteCond %{REQUEST_URI} !^(/.*)+trolling.py/
-        RewriteRule ^(.*)$ trolling.py$1 [PT]
+        RewriteRule ^(.*)$ trolling.py/$1 [PT]
 </IfModule>

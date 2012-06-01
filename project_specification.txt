@@ -1,0 +1,41 @@
+Goal:
+
+	Create an application whereby allowing users to create flyers to post on a corkboard wall
+	
+Items:
+	Web Applicaiton (the corkboard)
+		Web Application (Main Agent)		
+	
+	Web Service
+
+	iPhone Application (Secondary Agent)
+
+
+Workflow:
+
+1. User Authenticates (OAUTH)
+
+2. User can do the following:
+	Flyers:
+		a. 	create flyer
+		b. 	update flyer
+		c. 	post flyer	
+		d. 	remove flyer
+	
+	Corkboard:
+		a. 	add to corkboard
+				i.	id of flyer
+				ii.	demensions of flyer
+		b. 	remove from corkboard
+		c. 	settings
+				i. 	amount of flyers allowed
+				ii.	life of flyer regular
+				iii.	flyer payment options
+						a. How Much?
+						b. For How Long?
+		d.	Scan Feed
+				i. QRcode
+		e.	Now Cork It
+				i. 	Loads list of feeds to assoicated corkboard id.
+				ii.	one user per corkboard
+

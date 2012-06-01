@@ -22,9 +22,9 @@ class twiwp:
         sinceLen = len(queryParams.sinceID)
         
         if sinceLen > 0:
-            url="http://search.twitter.com/search.json?q=" + queryParams.transAuth + "&since_id=" + queryParams.sinceID
+            url="http://search.twitter.com/search.json?q%23=" + queryParams.transAuth + "&since_id=" + queryParams.sinceID
         else:
-            url="http://search.twitter.com/search.json?q=" + queryParams.transAuth + "&rpp=100"  
+            url="http://search.twitter.com/search.json?q=%23" + queryParams.transAuth + "&rpp=100"  
 
         #build jSON    
         req = urllib2.Request(url)
